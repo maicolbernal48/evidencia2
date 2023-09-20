@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>FOTO</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title class="ion-text-center" color="primary" size="large">FOTO</ion-title>
+    </ion-toolbar >
+    <ion-toolbar class="leve" color="primary"></ion-toolbar>
+  </ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large"></ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <img alt="Silhouette of mountains" src="{{imagencard1}}" />    <ion-card-header>
+      
+      <ion-input [(ngModel)]="cardName"></ion-input>
+    </ion-card-header>
+  
+    <ion-textarea [(ngModel)]="cardText"></ion-textarea> 
+    <ion-button expand="full" (click)="createCard()">Crear Tarjeta</ion-button>
+  </ion-card>
+
+  
+
+
+</ion-content>
+<div style="margin-bottom: 60px;"></div>
+
+  <ion-toolbar color="primary" position="bottom" style="position: fixed; bottom: 0; width: 100%;">
+  </ion-toolbar>
+
+  <ion-fab  class="icono1" vertical="bottom" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="camera-outline" (click)="takePicture1()"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
